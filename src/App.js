@@ -1,0 +1,53 @@
+import React from 'react';
+import './App.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import SearchBar from './components/SearchBar';
+import Cryptos from './components/Cryptos';
+
+
+//https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
+function App() {
+
+  const [cryptos, setCryptos] = useState([]);
+  const [search, setSearch] = useState('');
+  const [filteredCoins, setFilteredCoins] = useState([]);
+  const [allCoins, setAllCoins] = useState(true);
+
+   useEffect(() => {
+     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    .then(res => {
+      setCryptos(res.data)
+     
+    
+    })
+    
+  }, [])
+
+  const change = e => {
+    setSearch(e.target.value);
+    setFilteredCoins(cryptos.filter(cry => cry.name.toLowerCase().includes(search.toLowerCase())))
+    if (e.target.value === ''){
+      setAllCoins(true)
+    }else{
+      setAllCoins(false)
+    }
+  }
+
+
+ 
+
+  return (
+    <div className="App">
+    <h1>Crypto Tracker</h1>
+       
+     <SearchBar onChange = {change} />
+     {allCoins ? <Cryptos cryptos={cryptos}/> : <Cryptos cryptos={filteredCoins} />}
+   
+
+
+    </div>
+  );
+}
+
+export default App;
