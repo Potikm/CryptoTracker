@@ -7,8 +7,12 @@ const Crypto = ({crypto}) => {
   return (
     <div className='crypto'>
       <h3 className='rank'>{crypto.market_cap_rank}</h3>
+
+      <div className="description">
       <img src={crypto.image} alt="" className='img'/>
        <h3 className='name'>{crypto.id}</h3>
+      </div>
+     
         <h4 >{crypto.symbol}</h4>
         <h3 className='price'>${crypto.current_price.toLocaleString('en-US')}</h3>
         <h3 className='upDown' style={{color:color}}>{crypto.price_change_percentage_24h}%</h3>

@@ -59,25 +59,44 @@ code {
   display: grid;
   grid-template-columns: repeat(1,auto);
   gap: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 
 .crypto{
-  
- 
-  width: 700px;
-  right: 0;
-  left: 0;
+
+  width: 1000px;
+
   margin-right: auto;
   margin-left: auto;
-  
   background-color: white;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
   border-radius: 6px;
+  margin: 2rem 1rem;
+  padding: .7rem 1rem;
+ 
+  
 }
+
+.crypto:hover{
+  transform: scale(1.04);
+  transition: .3s ease-in-out;
+
+}
+
+.description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  left: 0;
+}
+
 
 .img{
   max-width: 30px;

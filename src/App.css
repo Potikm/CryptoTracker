@@ -6,6 +6,7 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-family: 'Oswald', sans-serif;
   font-family: 'Roboto Serif', serif;
+  
 }
 
 .App {
@@ -14,7 +15,7 @@ body{
   position: relative;
   justify-content: center;
   align-items: center;
-
+  
 }
 
 .App-logo {
