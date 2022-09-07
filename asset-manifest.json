@@ -1,15 +1,15 @@
 {
-  "main.css": "/CryptoTracker/static/css/main.3470fd41.chunk.css",
-  "main.js": "/CryptoTracker/static/js/main.af1eeea3.chunk.js",
-  "main.js.map": "/CryptoTracker/static/js/main.af1eeea3.chunk.js.map",
+  "main.css": "/CryptoTracker/static/css/main.055b565b.chunk.css",
+  "main.js": "/CryptoTracker/static/js/main.19680b69.chunk.js",
+  "main.js.map": "/CryptoTracker/static/js/main.19680b69.chunk.js.map",
   "static/js/1.6d901b3e.chunk.js": "/CryptoTracker/static/js/1.6d901b3e.chunk.js",
   "static/js/1.6d901b3e.chunk.js.map": "/CryptoTracker/static/js/1.6d901b3e.chunk.js.map",
   "static/js/2.f6cbad1c.chunk.js": "/CryptoTracker/static/js/2.f6cbad1c.chunk.js",
   "static/js/2.f6cbad1c.chunk.js.map": "/CryptoTracker/static/js/2.f6cbad1c.chunk.js.map",
   "runtime~main.js": "/CryptoTracker/static/js/runtime~main.62322ce9.js",
   "runtime~main.js.map": "/CryptoTracker/static/js/runtime~main.62322ce9.js.map",
-  "static/css/main.3470fd41.chunk.css.map": "/CryptoTracker/static/css/main.3470fd41.chunk.css.map",
+  "static/css/main.055b565b.chunk.css.map": "/CryptoTracker/static/css/main.055b565b.chunk.css.map",
   "index.html": "/CryptoTracker/index.html",
-  "precache-manifest.b2c88afab253c61d50372910589e154c.js": "/CryptoTracker/precache-manifest.b2c88afab253c61d50372910589e154c.js",
+  "precache-manifest.f76a88c368e9bef5f68bde05eb505ba5.js": "/CryptoTracker/precache-manifest.f76a88c368e9bef5f68bde05eb505ba5.js",
   "service-worker.js": "/CryptoTracker/service-worker.js"
 }
