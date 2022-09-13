@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom'
+import {HashRouter, Link, Route, Routes} from 'react-router-dom'
 import './App.css';
 import { useEffect, useState, } from 'react';
 import axios from 'axios';
@@ -43,14 +43,14 @@ function App() {
  
 
   return (
-    <BrowserRouter >
+    <HashRouter >
     <div className="App">
     <h1>Crypto Tracker</h1>
        
     
       <Routes>
    
-      {allCoins ?  <Route exact path='/CryptoTracker' element={<><SearchBar onChange = {change} /> <Trending /> <Cryptos cryptos={cryptos}/></>}/>  : <Route path='/CryptoTracker' element={<><SearchBar onChange = {change} /> <Cryptos cryptos={filteredCoins}/></>}/>}
+      {allCoins ?  <Route exact path='/' element={<><SearchBar onChange = {change} /> <Trending /> <Cryptos cryptos={cryptos}/></>}/>  : <Route path='/' element={<><SearchBar onChange = {change} /> <Cryptos cryptos={filteredCoins}/></>}/>}
       <Route path='/Crypto/:CryptoId' element={<CryptoInfo />}></Route>
      
       </Routes>
@@ -59,7 +59,7 @@ function App() {
 
 
     </div>
-    </BrowserRouter>
+    </HashRouter>
   );
  
 }
