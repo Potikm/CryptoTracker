@@ -1,9 +1,13 @@
 import React from 'react';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom'
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, } from 'react';
 import axios from 'axios';
 import SearchBar from './components/SearchBar';
 import Cryptos from './components/Cryptos';
+import CryptoInfo from './components/CryptoInfo';
+import Footer from './components/Footer';
+import Trending from './components/Trending';
 
 
 //https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
@@ -18,9 +22,10 @@ function App() {
      axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
     .then(res => {
       setCryptos(res.data)
-     
+    
     
     })
+   
     
   }, [])
 
@@ -38,16 +43,25 @@ function App() {
  
 
   return (
+    <BrowserRouter >
     <div className="App">
     <h1>Crypto Tracker</h1>
        
-     <SearchBar onChange = {change} />
-     {allCoins ? <Cryptos cryptos={cryptos}/> : <Cryptos cryptos={filteredCoins} />}
+    
+      <Routes>
    
+      {allCoins ?  <Route exact path='/CryptoTracker' element={<><SearchBar onChange = {change} /> <Trending /> <Cryptos cryptos={cryptos}/></>}/>  : <Route path='/CryptoTracker' element={<><SearchBar onChange = {change} /> <Cryptos cryptos={filteredCoins}/></>}/>}
+      <Route path='/Crypto/:CryptoId' element={<CryptoInfo />}></Route>
+     
+      </Routes>
+    
+      <Footer />
 
 
     </div>
+    </BrowserRouter>
   );
+ 
 }
 
 export default App;

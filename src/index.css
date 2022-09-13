@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Merriweather&family=Open+Sans&family=Oswald&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Merriweather&family=Montserrat&family=Open+Sans&family=Oswald&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200&family=Source+Sans+Pro:wght@300&display=swap');
 
 body {
   margin: 0;
@@ -9,14 +7,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(0,0,0);
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(56,8,73,1) 0%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
-   box-sizing: border-box;
-   font-family: 'Fredoka', sans-serif;
-font-family: 'Merriweather', serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Roboto Serif', serif;
+background-color: 	#303030;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Serif', serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 code {
@@ -24,23 +23,37 @@ code {
     monospace;
 }
 
+.upInfo{
+  display: flex;
+  justify-content: space-evenly ;
+  align-items: center;
+}
 
 .searchBar{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  position: relative;
  
+}
+
+.imgSearch{
+  position: absolute;
+  left: 40px;
+  top: 15px;
 }
 
 .input{
   width: 400px;
   height: 25px;
   border: none;
+  padding: 10px;
   background-color: darkgray;
   padding-left: 10px;
   border-radius: 50px;
   font-size: 20px;
+  padding-left: 50px;
 }
 
 .imgBar{
@@ -55,31 +68,39 @@ code {
 }
 
 .cryptos{
-  padding-top: 50px;
+  margin-top: 50px;
+  width: 1090px;
   display: grid;
   grid-template-columns: repeat(1,auto);
-  gap: 30px;
+  
+  border-radius: 5px;
   text-align: center;
   justify-content: center;
   align-items: center;
- 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-
-.crypto{
-
-  width: 1000px;
-
-  margin-right: auto;
-  margin-left: auto;
-  background-color: white;
+.underChart{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.crypto{
+  width: 1000px;
+  text-decoration: none;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgb(40,40,40);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
   border-radius: 6px;
   margin: 2rem 1rem;
   padding: .7rem 1rem;
  
+  
   
 }
 
@@ -95,9 +116,215 @@ code {
   align-items: center;
   gap: 20px;
   left: 0;
+
+  
+}
+
+.cryptoInfo{
+  padding-top: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 150px;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   width: 1800px;
+   height: auto;
+   border-radius: 50px;
+}
+
+
+
+.nameSection{
+  display: flex;
+  gap: 20px;
+}
+
+.nameDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.colorWhite{
+  color: white;
+}
+
+.priceDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.downInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 80px;
+}
+
+.description1{
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.description2{
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  position: relative;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.aboutHeader{
+ position: absolute;
+ left: 0;
+ top: 0;
+}
+
+
+.about a{   /*deleting link*/
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: white;
+}
+
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.stats{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 200px);
+}
+
+.chartRange{
+  position: absolute;
+ 
+}
+
+.borders{
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+ 
+}
+
+.chart{
+  width: 700px;
+  position: relative;
+
+
+}
+.imgInfo{
+  max-width: 150px;
 }
 
 
 .img{
   max-width: 30px;
+}
+
+.footer{
+  margin-top: 50px;
+  height: 300px;
+  width: 1090px;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  gap: 600px;
+  margin-bottom: 100px;
+}
+
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.support{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.faImg{
+  color: #008B8B;
+
+}
+
+.trending{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 1200px;
+  height: auto;
+  padding: 20px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 5px;
+ padding-top: 100px;
+ position: relative;
+ text-align: center;
+
+}
+
+.trendCoin{
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  background-color: rgb(40,40,40);
+  border-radius: 6px;
+}
+
+.trendHeader{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+
 }

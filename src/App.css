@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Merriweather&family=Open+Sans&family=Oswald&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Merriweather&family=Montserrat&family=Open+Sans&family=Oswald&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200&family=Source+Sans+Pro:wght@300&display=swap');
 
 body{
   font-family: 'Fredoka', sans-serif;
   font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', sans-serif;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Oswald', sans-serif;
   font-family: 'Roboto Serif', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   box-sizing: border-box;
   position: relative;

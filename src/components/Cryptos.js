@@ -7,9 +7,6 @@ const Cryptos = ({cryptos}) => {
  
 
   return (
-    
-
-
     <div className='cryptos'>
    
      {cryptos.map((cry, index) => (
